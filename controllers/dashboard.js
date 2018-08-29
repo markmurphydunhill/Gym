@@ -4,6 +4,8 @@ const accounts = require ('./accounts.js');
 const logger = require('../utils/logger');
 const assessmentStore = require('../models/assessment-store');
 const userStore = require('../models/user-store');
+const analytics = require('./analytics.js');
+
 
 const uuid = require('uuid');
 
@@ -11,12 +13,15 @@ const dashboard = {
   index(request, response) {
     logger.info('dashboard rendering');
     const loggedInUser = accounts.getCurrentUser(request);
+    const loggedInUserId = loggedInUser.id;
    // const loggedInUserName = accounts.getUserNameById
+    const bmi = analytics.getBmi(loggedInUserId);
     const viewData = {
       title: loggedInUser,      
       assessmentlist: assessmentStore.getUserAssessments(loggedInUser.id),
+      bmi:  bmi,
     };
-    logger.info('about to render', assessmentStore.getUserAssessments(loggedInUser.id));
+    //logger.info('about to render', assessmentStore.getUserAssessments(loggedInUser.id));
     response.render('dashboard', viewData);
   },
   

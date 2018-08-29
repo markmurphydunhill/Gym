@@ -8,7 +8,7 @@
       "assessmentResults": [
         {
           "id": "06",
-          "weight": "12346",
+          "weight": "75",
           "chest": "23456",
           "thigh": "23456",
           "upperarm": "23456",
@@ -48,7 +48,7 @@
         },
         {
           "id": "772edc1e-2d7a-4a0c-907c-6502892f1c35",
-          "weight": "44",
+          "weight": "75",
           "chest": "44",
           "thigh": "44",
           "upperarm": "44",
