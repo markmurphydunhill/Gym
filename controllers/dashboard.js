@@ -13,7 +13,7 @@ const dashboard = {
     const loggedInUser = accounts.getCurrentUser(request);
    // const loggedInUserName = accounts.getUserNameById
     const viewData = {
-      title: loggedInUser,
+      title: loggedInUser,      
       assessmentlist: assessmentStore.getUserAssessments(loggedInUser.id),
     };
     logger.info('about to render', assessmentStore.getUserAssessments(loggedInUser.id));
