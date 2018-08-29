@@ -31,7 +31,7 @@ const analytics = {
     const usersgoallist = goalStore.getGoallist(id);
     const goallist = usersgoallist[0].goals;
     const latestgoal = goallist[goallist.length-1];
-    logger.info(latestassessment);
+    //logger.info('Last Assessment',latestassessment);
     
     let goalstatus = '';
     
@@ -47,7 +47,36 @@ const analytics = {
     
     return goalstatus;
     
-}
+},
+  
+  getTrend(id){
+    const assessments = assessmentStore.getUserAssessments(id);
+    const assessment = assessments[0].assessmentResults;
+       
+    let trend = true;
+   
+    //assessment[0].trend = trend;
+    
+  if (assessment.length > 1) {
+        assessment[0].trend = trend;
+      for (var i = 1; i < assessment.length; i++) {
+          let trend = true;
+          if(assessment[i].weight > assessment[i-1].weight){
+               trend = false;
+               assessment[i].trend = trend; 
+             } 
+          else
+           assessment[i].trend = trend;            
+      }
+  
+       //logger.info('trend',assessment);   
+      return assessment;
+             
+   }   
+    
+    
+  
+  }
   
    
 };

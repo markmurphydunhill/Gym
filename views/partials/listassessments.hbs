@@ -11,6 +11,7 @@
       <th>Waist</th>
       <th>Hips</th>
       <th>Comments</th>
+      <th>Trend</th>
       <th></th>
     </tr>
   </thead>
@@ -45,6 +46,13 @@
             <td>
               {{comments}}
             </td>
+            <td>            
+             {{#if  trend  }}
+             <a class="ui teal tag label"></a>
+             {{else}}
+             <a class="ui red tag label"></a>
+             {{/if}}
+              </td>
             <td>
             <a href="/assessment/{{../id}}/deleteAssessment/{{id}}" class="ui tiny red button"> Delete
          
