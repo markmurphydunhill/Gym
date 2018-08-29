@@ -8,9 +8,10 @@ const assessmentStore = {
   store: new JsonStore('./models/assessment-store.json', { assessmentCollection: [] }),
   collection: 'assessmentCollection',
 
-  /*getAllPlaylists() {
+   getAllAssessmentlists() {
     return this.store.findAll(this.collection);
-  },*/
+  },
+  
 
   getAssessmentlist(id) {
     return this.store.findOneBy(this.collection, { id: id });
@@ -30,6 +31,19 @@ const assessmentStore = {
     const assessmentlist = this.getAssessmentlist(id);
     const assessments = assessmentlist.assessmentResults;
     _.remove(assessments, { id: assessmentId});
+    this.store.save();
+  },
+  
+    addComment(id, comment) {
+    const assessment = this.getPlaylist(id);
+    playlist.songs.push(song);
+
+    let duration = 0;
+    for (let i = 0; i < playlist.songs.length; i++) {
+      duration += playlist.songs[i].duration;
+    }
+
+    playlist.duration = duration;
     this.store.save();
   },
 

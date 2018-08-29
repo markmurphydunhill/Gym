@@ -33,7 +33,8 @@
           "thigh": "100",
           "upperarm": "100",
           "waist": "100",
-          "hips": "100"
+          "hips": "100",
+          "comments": "Beethoven2"
         },
         {
           "id": "aebb1132-75e8-4934-96e6-83c79780214b",
@@ -42,14 +43,15 @@
           "thigh": "55",
           "upperarm": "55",
           "waist": "55",
-          "hips": "55"
+          "hips": "55",
+          "comments": "Beethoven2"
         }
       ]
     },
     {
       "id": "02",
       "title": "Assessment 2",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86f0",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
       "duration": 35,
       "assessmentResults": [
         {
@@ -69,7 +71,8 @@
           "thigh": "99",
           "upperarm": "99",
           "waist": "99",
-          "hips": "99"
+          "hips": "99",
+          "comments": "Beethoven2"
         }
       ]
     }

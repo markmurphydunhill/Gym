@@ -1,8 +1,15 @@
 
 <table class="ui table">
   <thead>
-    mark id great
-   
+    This is the listassessmentforTTT partial
+    
+    <h2 class="ui header">
+     {{title.firstName}}
+    {{title.lastName}}'s
+      Assessments
+    </h2>
+    
+    
     <tr>
       <th>Weight </th>
       <th>Chest</th>
@@ -16,8 +23,7 @@
   </thead>
   <tbody>
   
-    {{#each assessmentlist}}
-    {{#each assessmentResults}}
+    {{#each assessmentlist.assessmentResults}} 
        
     
       <tr>
@@ -48,7 +54,14 @@
             </a>
             </td>        
       </tr>
-    {{/each}} 
+    <form class="ui segment form" action="/listassessment/addcomment/${assessment.id}" method="POST">
+            <div class="field">
+
+                <input placeholder="Comments" type="text" name="comment">
+            </div>
+            <button class="ui blue submit button">Add Comment</button>
+        </form>
+    
     {{/each}}  
   </tbody>
 </table>

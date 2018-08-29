@@ -1,8 +1,15 @@
+<h2 class="ui header">
+     <th class="ui center aligned row"><i class="user icon"></i></th>
+    {{title.firstName}}
+    {{title.lastName}}
+</h2>
+
+{{#each assessmentlist.assessmentResults}} 
 
 <table class="ui table">
-  <thead>
-    mark id great
-   
+     
+     
+     <thead>
     <tr>
       <th>Weight </th>
       <th>Chest</th>
@@ -11,14 +18,10 @@
       <th>Waist</th>
       <th>Hips</th>
       <th>Comments</th>
-      <th></th>
+    
     </tr>
   </thead>
-  <tbody>
-  
-    {{#each assessmentlist}}
-    {{#each assessmentResults}}
-       
+  <tbody>       
     
       <tr>
             <td>
@@ -42,13 +45,19 @@
             <td>
               {{comments}}
             </td>
-            <td>
-            <a href="/assessment/{{../id}}/deleteAssessment/{{id}}" class="ui tiny red button"> Delete
-         
-            </a>
-            </td>        
+                  
       </tr>
-    {{/each}} 
-    {{/each}}  
+    
   </tbody>
-</table>
+  </table>
+    <form class="ui segment form" action="/assessmentlist/{{../id}}/addcomment/{{id}}" method="POST">
+   
+           
+            <div class="field">
+
+                <input placeholder="Comments" type="text" name="comment">
+            </div>
+            <button class="ui blue submit button">Add Comment</button>
+        </form>
+    
+    {{/each}}
