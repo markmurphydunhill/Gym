@@ -1,18 +1,28 @@
 <table class="ui table">
   <thead>
     <tr>
-      <th>Song</th>
+      <th>Title</th>
       <th>Artist</th>
+      <th>Duration</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
-    {{#each playlist.songs}}
+    {{#each assessmentlist.songs}}
       <tr>
         <td>
           {{title}}
         </td>
         <td>
           {{artist}}
+        </td>
+        <td>
+          {{duration}}
+        </td>
+        <td>
+          <a href="/playlist/{{../assessmentlist.id}}/deletesong/{{id}}" class="ui icon button">
+            <i class="icon trash"></i>
+          </a>
         </td>
       </tr>
     {{/each}}
