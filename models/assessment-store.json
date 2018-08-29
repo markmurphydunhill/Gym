@@ -1,0 +1,74 @@
+{
+  "assessmentCollection": [
+    {
+      "title": "Assessment 1",
+      "assessments": [
+        {
+          "weight": "12346",
+          "chest": "23456",
+          "thigh": "23456",
+          "upperarm": "23456",
+          "waist": "23456",
+          "hips": "23456",
+          "comments": "Beethoven"
+          
+        },
+         {
+          "weight": "12346",
+          "chest": "23456",
+          "thigh": "23456",
+          "upperarm": "23456",
+          "waist": "23456",
+          "hips": "23456",
+          "comments": "Beethoven1"
+          
+        },
+         {
+          "weight": "12346",
+          "chest": "23456",
+          "thigh": "23456",
+          "upperarm": "23456",
+          "waist": "23456",
+          "hips": "23456",
+          "comments": "Beethoven2"
+          
+        }
+      ]
+    },
+    {
+      "title": "Assessment 2",
+      "assessments": [
+       {
+          "weight": "12346",
+          "chest": "23456",
+          "thigh": "23456",
+          "upperarm": "23456",
+          "waist": "23456",
+          "hips": "23456",
+          "comments": "Beethoven3"
+          
+        },
+       {
+          "weight": "12346",
+          "chest": "23456",
+          "thigh": "23456",
+          "upperarm": "23456",
+          "waist": "23456",
+          "hips": "23456",
+          "comments": "Beethoven4"
+          
+        },
+ {
+          "weight": "12346",
+          "chest": "23456",
+          "thigh": "23456",
+          "upperarm": "23456",
+          "waist": "23456",
+          "hips": "23456",
+          "comments": "Beethoven5"
+          
+        }
+      ]
+    }
+  ]
+}

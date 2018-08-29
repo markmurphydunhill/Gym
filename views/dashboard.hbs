@@ -1,0 +1,59 @@
+{{> menu id="dashboard"}}
+
+{{#each assessmentsCompleted}}
+  <section class="ui segment">
+    <h2 class="ui header">
+      {{title}}
+    </h2>
+    <table class="ui table">
+      <thead>
+        <tr>
+          <th>Weight</th>
+          <th>Chest</th>
+          <th>Thigh</th>
+          <th>Upper Arm</th>
+          <th>Waist</th>
+          <th>Hips</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each assessments}}
+          <tr>
+            <td>
+              {{weight}}
+            </td>
+            <td>
+              {{chest}}
+            </td>
+            <td>
+              {{thigh}}
+            </td>
+            <td>
+              {{upperarm}}
+            </td>
+            <td>
+              {{waist}}
+            </td>
+            <td>
+              {{hips}}
+            </td>
+            <td>
+              {{comments}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </section>
+{{/each}}
+
+<section class="ui raised segment">
+  <table class="ui fixed table">
+    <thead>
+    <tr>
+      <th class="ui center aligned row"><i class="user icon huge"></i> <p>${member.firstname} ${member.lastname}</p></th>
+      <th class="ui center aligned row"><i class="user icon huge"></i></th>
+      </tr>
+    </thead>
+  </table>
