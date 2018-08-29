@@ -1,12 +1,7 @@
 {{> menu id="dashboard"}}
 
-{{#each assessmentCompleted}}
-  <section class="ui segment">
-    <h2 class="ui header">
-      {{title}}
-    </h2>
-    <p> Total Duration: {{duration}} </p>
-    <a href="/assessment/{{id}}"> View </a>
-  </section>
-{{/each}}
+<section class="ui segment">
+  {{> listsongs}}
+  {{> addsong}}
+</section>
 

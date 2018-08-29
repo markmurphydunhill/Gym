@@ -1,66 +1,30 @@
 {
   "assessmentCollection": [
     {
-      "id": "01",
-      "title": "Assessment 1",
-      "duration": 35,
-      "assessmentResults": [
+      "id": "547f708d-da25-4897-b52f-4f930c7f0f7c",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Marks Playlist",
+      "songs": [
         {
-          "id": "05",
-          "weight": "12346",
-          "chest": "23456",
-          "thigh": "23456",
-          "upperarm": "23456",
-          "waist": "23456",
-          "hips": "23456",
-          "comments": "Beethoven1"
+          "id": "ab6e7745-e6bf-4507-9b32-5416ba30a683",
+          "title": "Marks Sonata No.1",
+          "artist": "Mark Murphy",
+          "duration": 34
         },
         {
-          "id": "06",
-          "weight": "12346",
-          "chest": "23456",
-          "thigh": "23456",
-          "upperarm": "23456",
-          "waist": "23456",
-          "hips": "23456",
-          "comments": "Beethoven2"
-        },
-        {
-          "id": "c463f88c-c261-48e6-97d8-88dbf55a073f",
-          "weight": "77",
-          "chest": "777",
-          "thigh": "77",
-          "upperarm": "77",
-          "waist": "77",
-          "hips": "77"
+          "id": "0967ac52-433c-49d3-8ec4-884d1db7a2bc",
+          "title": "Shauna",
+          "artist": "Shauna",
+          "duration": 14
         }
-      ]
+      ],
+      "duration": 48
     },
     {
-      "id": "02",
-      "title": "Assessment 2",
-      "duration": 35,
-      "assessmentResults": [
-        {
-          "id": "09",
-          "weight": "12346",
-          "chest": "23456",
-          "thigh": "23456",
-          "upperarm": "23456",
-          "waist": "23456",
-          "hips": "23456",
-          "comments": "Beethoven5"
-        },
-        {
-          "id": "447a7f9c-d39b-4f96-af9d-d61729e79b8d",
-          "weight": "33",
-          "chest": "99",
-          "thigh": "99",
-          "upperarm": "99",
-          "waist": "99",
-          "hips": "99"
-        }
-      ]
+      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "title": "Marks Sonata No.1",
+      "songs": []
     }
   ]
 }
