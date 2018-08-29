@@ -1,10 +1,12 @@
 {{> menu id="dashboard"}}
 
 <section class="ui segment">
-    <h2 class="ui header">
-    
-    {{assessmentlist.title}}  
+  <h2 class="ui header">
+    {{title.firstName}}
+    {{title.lastName}}'s
+    Assessment List
   </h2>
+ 
   {{> listassessments}}
   {{> addassessments}}
   

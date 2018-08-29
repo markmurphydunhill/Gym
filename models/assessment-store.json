@@ -34,6 +34,15 @@
           "upperarm": "100",
           "waist": "100",
           "hips": "100"
+        },
+        {
+          "id": "aebb1132-75e8-4934-96e6-83c79780214b",
+          "weight": "55",
+          "chest": "55",
+          "thigh": "55",
+          "upperarm": "55",
+          "waist": "55",
+          "hips": "55"
         }
       ]
     },
