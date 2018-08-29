@@ -3,14 +3,17 @@
 const accounts = require ('./accounts.js');
 const logger = require('../utils/logger');
 const assessmentStore = require('../models/assessment-store');
+const userStore = require('../models/user-store');
+
 const uuid = require('uuid');
 
 const dashboard = {
   index(request, response) {
     logger.info('dashboard rendering');
     const loggedInUser = accounts.getCurrentUser(request);
+   // const loggedInUserName = accounts.getUserNameById
     const viewData = {
-      title: 'Playlist Dashboard Marks',
+      title: loggedInUser,
       assessmentlist: assessmentStore.getUserAssessments(loggedInUser.id),
     };
     logger.info('about to render', assessmentStore.getUserAssessments(loggedInUser.id));
