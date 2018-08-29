@@ -27,6 +27,7 @@ router.get('/assessmentlist/:id/user/:userid', trainerdashboard.indexlist);
 router.post('/assessmentlist/:listid/addcomment/:id', trainerdashboard.addComment);
 
 router.get('/settings', settings.index);
+router.post('/settings/update/:userid', settings.updateUser);
 
 
 

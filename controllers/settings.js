@@ -18,6 +18,20 @@ const settings = {
     };
     logger.info('about to render settings', userStore.getUserById(loggedInUser.id));
     response.render('settings', viewData);
+  },
+  
+  updateUser(request, response){
+    //const loggedInUserId = accounts.getCurrentUser(request);
+    const LoggedInUserId = request.params.userid;
+    const user = request.body;
+    user.id = LoggedInUserId;
+    //const assessmentid = request.params.id;
+    //const assessment = assessmentStore.getAssessmentlist(assessmentlistid);
+   
+    logger.info('updating user', user);
+    userStore.updateUser(user); 
+    response.redirect('/dashboard/');
+  
   }
   
  
