@@ -18,13 +18,14 @@ const dashboard = {
    // const loggedInUserName = accounts.getUserNameById
     const bmi = analytics.getBmi(loggedInUserId);
     const goalstatus = analytics.getGoalStatus(loggedInUserId);
+    const trend = analytics.getTrend(loggedInUserId);
     const viewData = {
       title: loggedInUser,      
       assessmentlist: assessmentStore.getUserAssessments(loggedInUser.id),
       bmi:  bmi,
       goalstatus: goalstatus,
     };
-    //logger.info('about to render', assessmentStore.getUserAssessments(loggedInUser.id));
+    logger.info('about to render', assessmentStore.getUserAssessments(loggedInUser.id));
     response.render('dashboard', viewData);
   },
   
