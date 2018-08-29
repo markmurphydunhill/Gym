@@ -10,12 +10,49 @@ const dashboard = {
     logger.info('dashboard rendering');
     const loggedInUser = accounts.getCurrentUser(request);
     const viewData = {
-      title: 'Playlist Dashboard',
-      assessmentlist: assessmentStore.getUserAssessmentlists(loggedInUser.id),
+      title: 'Playlist Dashboard Marks',
+      assessmentlist: assessmentStore.getUserAssessments(loggedInUser.id),
     };
-    logger.info('about to render', assessmentStore.getUserAssessmentlists(loggedInUser.id));
+    logger.info('about to render', assessmentStore.getUserAssessments(loggedInUser.id));
     response.render('dashboard', viewData);
   },
+  
+   deleteAssessment(request, response) {
+    const id = request.params.id;
+    const assessmentId = request.params.assessmentid;
+    logger.debug(`Deleting Assessment ${assessmentId}`);
+    assessmentStore.removeAssessment(id, assessmentId);
+    response.redirect('/dashboard/');
+  },
+  
+    addAssessment(request, response) {
+    const assessmentId = request.params.id;
+    const assessment = assessmentStore.getAssessmentlist(assessmentId);
+    const newAssessment = {
+      id: uuid(),
+      weight: request.body.weight,
+      chest: request.body.chest,
+      thigh: request.body.thigh,
+      upperarm: request.body.upperarm,
+      waist: request.body.waist,
+      hips: request.body.hips,
+    };
+    logger.debug('New Assessment = ', newAssessment);
+    assessmentStore.addAssessment (assessmentId, newAssessment);
+    response.redirect('/dashboard/');
+  },
+  
+   /*addAssessment(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
+    const newAssessment = {
+      id: uuid(),
+      userid: loggedInUser.id,
+      title: request.body.title,
+      songs: [],
+    };
+    logger.debug('Creating a new Playlist', newPlayList);
+    playlistStore.addPlaylist(newPlayList);
+    response.redirect('/dashboard');*/
 
   /*deletePlaylist(request, response) {
     const playlistId = request.params.id;

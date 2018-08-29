@@ -16,12 +16,17 @@ router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
 router.get('/dashboard', dashboard.index);
+
+router.get('/assessment/:id/deleteAssessment/:assessmentid', dashboard.deleteAssessment);
+router.post('/assessment/:id/addassessment', dashboard.addAssessment);
+
+
 //router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);
 //router.post('/dashboard/addplaylist', dashboard.addPlaylist);
 
-router.get('/about', about.index);
+//router.get('/about', about.index);
 //router.get('/playlist/:id', playlist.index);
-//router.get('/playlist/:id/deletesong/:songid', playlist.deleteSong);
-//router.post('/playlist/:id/addsong', playlist.addSong);
+
+
 
 module.exports = router;
