@@ -5,23 +5,35 @@ const JsonStore = require('./json-store');
 
 const assessmentStore = {
 
-  store: new JsonStore('./models/assessment-store.json', { assessmenCollection: [] }),
+  store: new JsonStore('./models/assessment-store.json', { assessmentCollection: [] }),
   collection: 'assessmentCollection',
 
   /*getAllPlaylists() {
     return this.store.findAll(this.collection);
-  },
-
-  getPlaylist(id) {
-    return this.store.findOneBy(this.collection, { id: id });
   },*/
 
-  getUserAssessmentlists(userid) {
-    return this.store.findBy(this.collection, { userid: userid });
+  getAssessmentlist(id) {
+    return this.store.findOneBy(this.collection, { id: id });
   },
 
-  /*
-  addPlaylist(playlist) {
+  getUserAssessments(userid) {
+    return this.store.findBy(this.collection, { userid: userid });
+  },
+  
+  addAssessment(id, assessment) {
+    const assessmentlist = this.getAssessmentlist(id);
+    assessmentlist.assessmentResults.push(assessment);
+    this.store.save();
+  },
+  
+   removeAssessment(id, assessmentId) {
+    const assessmentlist = this.getAssessmentlist(id);
+    const assessments = assessmentlist.assessmentResults;
+    _.remove(assessments, { id: assessmentId});
+    this.store.save();
+  },
+
+  /*addPlaylist(playlist) {
     this.store.add(this.collection, playlist);
     this.store.save();
   },
