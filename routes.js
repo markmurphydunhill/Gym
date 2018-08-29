@@ -6,6 +6,7 @@ const router = express.Router();
 const accounts = require('./controllers/accounts.js');
 const dashboard = require('./controllers/dashboard.js');
 const about = require('./controllers/about.js');
+const settings = require('./controllers/settings.js');
 const trainerdashboard = require('./controllers/trainerdashboard.js');
 
 router.get('/', accounts.index);
@@ -24,6 +25,8 @@ router.post('/assessment/:id/addassessment', dashboard.addAssessment);
 
 router.get('/assessmentlist/:id/user/:userid', trainerdashboard.indexlist);
 router.post('/assessmentlist/:listid/addcomment/:id', trainerdashboard.addComment);
+
+router.get('/settings', settings.index);
 
 
 

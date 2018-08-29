@@ -85,7 +85,16 @@ const accounts = {
     } else {
       response.redirect('/login');
     }
+         
   },
+  
+  settings(){
+    
+  
+  
+  
+  }
+  
 };
 
 module.exports = accounts;

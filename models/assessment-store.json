@@ -14,7 +14,7 @@
           "upperarm": "23456",
           "waist": "23456",
           "hips": "23456",
-          "comments": "Good work"
+          "comments": "Your ass is to big"
         },
         {
           "id": "06",
@@ -24,7 +24,7 @@
           "upperarm": "23456",
           "waist": "23456",
           "hips": "23456",
-          "comments": ""
+          "comments": "You eat to much"
         },
         {
           "id": "cecb53bf-8860-4a6f-ab4e-49ca1f5bcc1c",
@@ -34,7 +34,7 @@
           "upperarm": "100",
           "waist": "100",
           "hips": "100",
-          "comments": "Beethoven2"
+          "comments": "Excellent work"
         },
         {
           "id": "aebb1132-75e8-4934-96e6-83c79780214b",
@@ -44,7 +44,27 @@
           "upperarm": "55",
           "waist": "55",
           "hips": "55",
-          "comments": "Beethoven2"
+          "comments": "Excellent work"
+        },
+        {
+          "id": "521d4a95-f4ef-4d04-8daa-a3909b50cbba",
+          "weight": "22",
+          "chest": "22",
+          "thigh": "22",
+          "upperarm": "22",
+          "waist": "22",
+          "hips": "22",
+          "comments": "Excellent work"
+        },
+        {
+          "id": "772edc1e-2d7a-4a0c-907c-6502892f1c35",
+          "weight": "44",
+          "chest": "44",
+          "thigh": "44",
+          "upperarm": "44",
+          "waist": "44",
+          "hips": "44",
+          "comments": "Excellent work"
         }
       ]
     },
@@ -62,7 +82,7 @@
           "upperarm": "23456",
           "waist": "23456",
           "hips": "23456",
-          "comments": ""
+          "comments": "Excellent work"
         },
         {
           "id": "447a7f9c-d39b-4f96-af9d-d61729e79b8d",
@@ -72,7 +92,7 @@
           "upperarm": "99",
           "waist": "99",
           "hips": "99",
-          "comments": "Well done"
+          "comments": "Well Done"
         }
       ]
     }
