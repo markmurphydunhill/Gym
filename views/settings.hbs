@@ -39,16 +39,16 @@
 
 <div class="ui two column grid basic middle aligned segment">
     <div class="column">
-        <form class="ui stacked segment form" action="/settings/update/${member.id}" method="POST">
+        <form class="ui stacked segment form" action="/settings/update/{{user.id}}" method="POST">
             <h3 class="ui header">Update Your Profile</h3>
             <div class="two fields">
                 <div class="field">
                     <label>First Name</label>
-                    <input placeholder="First Name" type="text" name="firstname">
+                    <input placeholder="First Name" type="text" name="firstName">
                 </div>
                 <div class="field">
                     <label>Last Name</label>
-                    <input placeholder="Last Name" type="text" name="lastname">
+                    <input placeholder="Last Name" type="text" name="lastName">
                 </div>
             </div>
             <div class="field">
@@ -60,8 +60,8 @@
                 <input type="password" name="password">
             </div>
             <div class="address">
-                <label>Address</label>
-                <input placeholder="Address" type="text" name="address">
+                <label>Gender</label>
+                <input placeholder="Gender" type="text" name="gender">
             </div>
 
             <div class="two fields">

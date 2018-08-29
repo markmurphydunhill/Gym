@@ -1,16 +1,15 @@
 {
   "users": [
     {
-      "firstName": "Homer",
-      "lastName": "Simpson",
+      "firstName": "Bart",
       "email": "homer@simpson.com",
       "password": "secret",
       "id": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "gender": "m",
-      "height":"180",
-      "startweight":"85"
+      "height": "210",
+      "startweight": "120",
+      "lastName": "Simpson"
     },
-    
     {
       "firstName": "Marge",
       "lastName": "Simpson",
@@ -18,8 +17,8 @@
       "password": "secret",
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
       "gender": "f",
-      "height":"167",
-      "startweight":"90"
+      "height": "167",
+      "startweight": "90"
     }
   ]
 }

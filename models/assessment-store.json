@@ -7,16 +7,6 @@
       "duration": 35,
       "assessmentResults": [
         {
-          "id": "05",
-          "weight": "12346",
-          "chest": "23456",
-          "thigh": "23456",
-          "upperarm": "23456",
-          "waist": "23456",
-          "hips": "23456",
-          "comments": "Your ass is to big"
-        },
-        {
           "id": "06",
           "weight": "12346",
           "chest": "23456",
