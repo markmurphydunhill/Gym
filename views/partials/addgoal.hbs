@@ -1,0 +1,28 @@
+
+<form class="ui stacked segment form" action="/addgoal/{{title.id}}" method="POST">
+  {{title.id}}
+   <div class="ui header">
+    <label>Add Goal</label>
+  </div>
+  <div class="two fields">
+    
+    <div class="field">
+      <label>Date</label>
+      <input placeholder = "Date" type = "date" name="goaldate">
+    </div>
+
+    <div class="field">
+      <label>Weight</label>
+      <input placeholder="Weight" type="text" name="goalweight">
+    </div>
+
+    <div class="field">
+      <label>Chest</label>
+      <input placeholder="Chest" type="text" name="goalchest">
+    </div> 
+  </div>
+
+
+  <button class="ui blue submit button">Add Goal</button>
+</form>
+

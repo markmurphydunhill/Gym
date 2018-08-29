@@ -29,6 +29,8 @@ router.post('/assessmentlist/:listid/addcomment/:id', trainerdashboard.addCommen
 router.get('/settings', settings.index);
 router.post('/settings/update/:userid', settings.updateUser);
 
+router.post('/addgoal/:userid', dashboard.addGoal);
+
 
 
 //router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);

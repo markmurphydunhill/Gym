@@ -5,6 +5,7 @@ const assessmentStore = require('../models/assessment-store');
 const userStore = require('../models/user-store');
 const uuid = require('uuid');
 const accounts = require ('./accounts.js');
+const goalStore = require('../models/usergoal-store');
 
 const analytics = {
   
@@ -14,23 +15,39 @@ const analytics = {
     const assessments = assessmentStore.getUserAssessments(id);
     const assessment = assessments[0].assessmentResults;
     const userinfo = userStore.getUserById(id) ;
-    logger.info('ass', assessment);
-    logger.info('len', assessment.lenght);
-    logger.info('user', userinfo.height);
     let bmi = ((assessment[assessment.length-1].weight)  / (userinfo.height * userinfo.height) );
     bmi = Math.round(bmi * 100)/100.0;
     
-    //[assessment.length - 1]
-     /*  
-    if (assessment.length >= 1){
-    var bmi = ((assessment[assessment.length - 1].weight)  / (userinfo.height * userinfo.height) );
-    //
-    logger.info(bmi);
-    return bmi; };
-  }; */
     return bmi;  
 
-  }
+  },
+  
+  getGoalStatus(id){
+    logger.info('Determinging Goal Status');
+    const assessments = assessmentStore.getUserAssessments(id);
+    const assessment = assessments[0].assessmentResults;
+    const latestassessment = assessment[assessment.length-1];
+    
+    const usersgoallist = goalStore.getGoallist(id);
+    const goallist = usersgoallist[0].goals;
+    const latestgoal = goallist[goallist.length-1];
+    logger.info(latestassessment);
+    
+    let goalstatus = '';
+    
+    //const goalstatus;
+      if (latestgoal.goaldate > latestassessment.date){
+        goalstatus = 'Open';
+      }
+      else if ((latestgoal.goalweight >latestassessment.weight) && (latestgoal.goalchest >latestassessment.chest ) ){ 
+        
+        goalstatus = 'Achieved - Well Done!';
+      }
+      else {goalstatus = 'Goal Missed'};  
+    
+    return goalstatus;
+    
+}
   
    
 };
