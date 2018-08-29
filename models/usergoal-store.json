@@ -1,0 +1,44 @@
+{
+  "goalCollection": [
+    {
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "goals": [
+        {
+          "goaldate": "21/06/2018",
+          "id": "06",
+          "goalweight": 75,
+          "goalchest": 23456
+        },
+        {
+          "goaldate": "2018-08-31",
+          "id": "a293b9b3-1a47-4555-ad14-8f7c3c3e11c7",
+          "goalweight": 75,
+          "goalchest": 44
+        },
+        {
+          "goaldate": "2017-08-31",
+          "id": "de2be970-d3cb-42dc-9d58-e6ecff1dd044",
+          "goalweight": 175,
+          "goalchest": 144
+        }
+      ]
+    },
+    {
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "goals": [
+        {
+          "goaldate": "21/06/2018",
+          "id": "09",
+          "goalweight": 12346,
+          "goalchest": 23456
+        },
+        {
+          "goaldate": "2018-08-31",
+          "id": "ddd043ee-5151-4410-9865-aa7f9fa4d715",
+          "goalweight": "90",
+          "goalchest": "99"
+        }
+      ]
+    }
+  ]
+}

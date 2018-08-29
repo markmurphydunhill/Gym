@@ -5,6 +5,7 @@ const logger = require('../utils/logger');
 const assessmentStore = require('../models/assessment-store');
 const userStore = require('../models/user-store');
 const analytics = require('./analytics.js');
+const goalStore = require('../models/usergoal-store');
 
 
 const uuid = require('uuid');
@@ -16,10 +17,12 @@ const dashboard = {
     const loggedInUserId = loggedInUser.id;
    // const loggedInUserName = accounts.getUserNameById
     const bmi = analytics.getBmi(loggedInUserId);
+    const goalstatus = analytics.getGoalStatus(loggedInUserId);
     const viewData = {
       title: loggedInUser,      
       assessmentlist: assessmentStore.getUserAssessments(loggedInUser.id),
       bmi:  bmi,
+      goalstatus: goalstatus,
     };
     //logger.info('about to render', assessmentStore.getUserAssessments(loggedInUser.id));
     response.render('dashboard', viewData);
@@ -38,6 +41,7 @@ const dashboard = {
     const assessment = assessmentStore.getAssessmentlist(assessmentId);
     const newAssessment = {
       id: uuid(),
+      date:  request.body.date,
       weight: request.body.weight,
       chest: request.body.chest,
       thigh: request.body.thigh,
@@ -47,6 +51,22 @@ const dashboard = {
     };
     logger.debug('New Assessment = ', newAssessment);
     assessmentStore.addAssessment (assessmentId, newAssessment);
+    response.redirect('/dashboard/');
+  },
+  
+      addGoal(request, response) {
+    const loggedinuser = request.params.userid;
+    //const assessment = assessmentStore.getAssessmentlist(assessmentId);
+    const newGoal = {
+    
+      goaldate:  request.body.goaldate,
+      id: uuid(),
+      goalweight: request.body.goalweight,
+      goalchest: request.body.goalchest,
+     
+    };
+    logger.debug('New Goal = ', newGoal);
+    goalStore.addGoal(loggedinuser, newGoal);
     response.redirect('/dashboard/');
   },
   

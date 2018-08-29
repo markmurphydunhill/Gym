@@ -24,6 +24,7 @@ const assessmentStore = {
   
   addAssessment(id, assessment) {
     const assessmentlist = this.getAssessmentlist(id);
+    logger.info('viewing aalist', assessmentlist);
     assessmentlist.assessmentResults.push(assessment);
     this.store.save();
   },
