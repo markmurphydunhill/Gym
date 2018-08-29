@@ -1,0 +1,86 @@
+<section class="ui raised segment">
+    <header class="ui header">
+        ${member.firstname} ${member.lastname}'s Details
+    </header>
+    <table class="ui fixed table">
+        <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Address</th>
+            <th>Height</th>
+            <th>Startweight</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <div class="ui bulleted list">
+
+            <tr>
+                <td> ${member.firstname} </td>
+                <td> ${member.lastname} </td>
+                <td> ${member.email} </td>
+                <td> ${member.password} </td>
+                <td> ${member.address} </td>
+                <td> ${member.height} </td>
+                <td> ${member.startweight} </td>
+
+        </div>
+        </tbody>
+    </table>
+
+</section>
+
+<div class="ui two column grid basic middle aligned segment">
+    <div class="column">
+        <form class="ui stacked segment form" action="/settings/update/${member.id}" method="POST">
+            <h3 class="ui header">Update Your Profile</h3>
+            <div class="two fields">
+                <div class="field">
+                    <label>First Name</label>
+                    <input placeholder="First Name" type="text" name="firstname">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input placeholder="Last Name" type="text" name="lastname">
+                </div>
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input placeholder="Email" type="text" name="email">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password">
+            </div>
+            <div class="address">
+                <label>Address</label>
+                <input placeholder="Address" type="text" name="address">
+            </div>
+
+            <div class="two fields">
+                <div class="field">
+                    <label>Height</label>
+                    <input placeholder="Height" type="text" name="height">
+                </div>
+                <div class="field">
+                    <label>Start Weight</label>
+                    <input placeholder="Start Weight" type="text" name="startweight">
+                </div>
+            </div>
+            <button class="ui blue submit button">Update</button>
+        </form>
+    </div>
+    <div class="column">
+        <img class="ui image" src="/public/images/todo-1.png">
+    </div>
+{"name":"favicon.png","date":"2018-08-20T09:49:09.912Z","url":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Ffavicon.png","type":"image/png","size":687,"imageWidth":16,"imageHeight":16,"thumbnail":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Ffavicon.png","thumbnailWidth":16,"thumbnailHeight":16,"dominantColor":null,"uuid":"vNcUHnnr3r4aRQcf"}
+{"name":"gym.PNG","date":"2018-08-20T09:49:10.020Z","url":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Fgym.PNG","type":"image/png","size":6776,"imageWidth":131,"imageHeight":121,"thumbnail":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Fgym.PNG","thumbnailWidth":131,"thumbnailHeight":121,"dominantColor":"rgb(252,252,252)","uuid":"2Z2HUbyR0kwUMQN9"}
+{"name":"BMI.PNG","date":"2018-08-20T09:49:10.083Z","url":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2FBMI.PNG","type":"image/png","size":43474,"imageWidth":177,"imageHeight":240,"thumbnail":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2FBMI.PNG","thumbnailWidth":177,"thumbnailHeight":240,"dominantColor":"rgb(252,252,252)","uuid":"BjG3PGXCXYGgxGE3"}
+{"name":"weight.PNG","date":"2018-08-20T09:49:10.328Z","url":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Fweight.PNG","type":"image/png","size":57227,"imageWidth":603,"imageHeight":349,"thumbnail":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Fthumbnails%2Fweight.PNG","thumbnailWidth":330,"thumbnailHeight":191,"dominantColor":"rgb(252,252,252)","uuid":"bVcPEFvV0IxI4xDX"}
+{"name":"todo-1.png","date":"2018-08-20T09:49:10.390Z","url":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Ftodo-1.png","type":"image/png","size":52509,"imageWidth":720,"imageHeight":720,"thumbnail":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Fthumbnails%2Ftodo-1.png","thumbnailWidth":330,"thumbnailHeight":330,"dominantColor":"rgb(252,252,252)","uuid":"s0wtK1JbICt2LG7P"}
+{"name":"login.PNG","date":"2018-08-20T09:49:10.444Z","url":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Flogin.PNG","type":"image/png","size":96542,"imageWidth":472,"imageHeight":301,"thumbnail":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Fthumbnails%2Flogin.PNG","thumbnailWidth":330,"thumbnailHeight":211,"dominantColor":"rgb(252,252,252)","uuid":"z82SeIWnBGuglyui"}
+{"name":"todo-2.jpg","date":"2018-08-20T09:49:10.697Z","url":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Ftodo-2.jpg","type":"image/jpeg","size":173108,"imageWidth":720,"imageHeight":720,"thumbnail":"https://cdn.glitch.com/9f237fdc-5e7d-43e4-a6a5-e8c2b3be1f76%2Fthumbnails%2Ftodo-2.jpg","thumbnailWidth":330,"thumbnailHeight":330,"dominantColor":"rgb(238,247,247)","uuid":"llH6uoCki6WKYfUm"}
+</div>
