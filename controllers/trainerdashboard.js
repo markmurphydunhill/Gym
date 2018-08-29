@@ -42,20 +42,28 @@ const trainerdashboard = {
   },
   
   addComment(request, response) {
-    const assessmentid = request.params.listid;
-    const assessment = assessmentStore.getAssessmentlist(assessmentlistId);
-    const newSong = {
-      id: uuid(),
-      title: request.body.title,
-      artist: request.body.artist,
-      duration: Number(request.body.duration),
+    const assessmentlistid = request.params.listid;
+    const assessmentid = request.params.id;
+    const assessment = assessmentStore.getAssessmentlist(assessmentlistid);
+    const newComment = {
+      
+      comments: request.body.comment
+      
     };
-    logger.debug('New Song = ', newSong);
-    playlistStore.addSong(playlistId, newSong);
+    logger.info('updating comment', newComment);
+    assessmentStore.addComment(assessmentlistid, assessmentid, newComment); 
+    response.redirect(/trainerdashboard/);
+  },
+  
+  /*deleteSong(request, response) {
+    const playlistId = request.params.id;
+    const songId = request.params.songid;
+    logger.debug(`Deleting Song ${songId} from Playlist ${playlistId}`);
+    playlistStore.removeSong(playlistId, songId);
     response.redirect('/playlist/' + playlistId);
   },
   
-  /*
+  
     addSong(request, response) {
     const playlistId = request.params.id;
     const playlist = playlistStore.getPlaylist(playlistId);

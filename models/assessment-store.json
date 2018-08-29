@@ -14,7 +14,7 @@
           "upperarm": "23456",
           "waist": "23456",
           "hips": "23456",
-          "comments": "Beethoven1"
+          "comments": "Good work"
         },
         {
           "id": "06",
@@ -24,7 +24,7 @@
           "upperarm": "23456",
           "waist": "23456",
           "hips": "23456",
-          "comments": "Beethoven2"
+          "comments": ""
         },
         {
           "id": "cecb53bf-8860-4a6f-ab4e-49ca1f5bcc1c",
@@ -62,7 +62,7 @@
           "upperarm": "23456",
           "waist": "23456",
           "hips": "23456",
-          "comments": "Beethoven5"
+          "comments": ""
         },
         {
           "id": "447a7f9c-d39b-4f96-af9d-d61729e79b8d",
@@ -72,7 +72,7 @@
           "upperarm": "99",
           "waist": "99",
           "hips": "99",
-          "comments": "Beethoven2"
+          "comments": "Well done"
         }
       ]
     }
