@@ -8,6 +8,7 @@
       <th>Waist</th>
       <th>Hips</th>
       <th>Comments</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -34,7 +35,11 @@
             <td>
               {{comments}}
             </td>
-        
+            <td>
+            <a href="/assessment/{{../assessmentDetails.id}}/deleteAssessment/{{id}}" class="ui icon button">
+            <i class="icon trash"></i>
+            </a>
+            </td>        
       </tr>
     {{/each}}
   </tbody>
