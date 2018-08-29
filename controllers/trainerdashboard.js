@@ -10,12 +10,22 @@ const trainerdashboard = {
   index(request, response) {
     //const playlistId = request.params.id;
     logger.info('Trainer Dashboard Rendering');
-    //const assessmentuserinfo = assessmentStore.getAllAssessmentlists()
-    //getUserById(id)    
+    const assessment = assessmentStore.getAllAssessmentlists();
+    const userinfo = userStore.getAllUsers() ;
+    const combinedinfo = [];
+        for (var i = 0; i < assessment.length; i++) {
+            if (assessment[i].userid === userinfo[i].id) {
+      combinedinfo.push({id: assessment[i].id, userid: assessment[i].userid, title: assessment[i].title,
+                         assessmentResults: assessment[i].assessmentResults,firstName: userinfo[i].firstName, 
+                         lastName: userinfo[i].lastName});    
+              }
+            }   
+       
     const viewData = {
-      title: 'Assessment Lists',
-      assessmentlist: assessmentStore.getAllAssessmentlists() ,
+       title: 'Assessment Lists',
+       assessmentlist: combinedinfo,
     };
+    logger.info(combinedinfo),
     response.render('trainerDashboard', viewData);
   },
   
@@ -31,7 +41,7 @@ const trainerdashboard = {
     response.render('trainerassessmentlist', viewData);
   },
   
-    addComment(request, response) {
+  addComment(request, response) {
     const assessmentid = request.params.listid;
     const assessment = assessmentStore.getAssessmentlist(assessmentlistId);
     const newSong = {
