@@ -31,8 +31,8 @@ const userStore = {
     const olduserdetails = this.getUserById(loggedInUser);
     logger.info('old', olduserdetails);
     const newuserdetails = user;
-    logger.info('new', newuserdetails);
-          olduserdetails.firstName = newuserdetails.firstName;  
+    logger.info('new', newuserdetails);          
+          olduserdetails.firstName = newuserdetails.firstName;
           olduserdetails.lastName = newuserdetails.lastName; 
           olduserdetails.email = newuserdetails.email; 
           olduserdetails.password = newuserdetails.password; 
