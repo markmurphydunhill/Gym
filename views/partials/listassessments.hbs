@@ -1,0 +1,41 @@
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>Weight</th>
+      <th>Chest</th>
+      <th>Thigh</th>
+      <th>Upper Arm</th>
+      <th>Waist</th>
+      <th>Hips</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each assessmentDetails.assessmentResults}}
+      <tr>
+            <td>
+              {{weight}}
+            </td>
+            <td>
+              {{chest}}
+            </td>
+            <td>
+              {{thigh}}
+            </td>
+            <td>
+              {{upperarm}}
+            </td>
+            <td>
+              {{waist}}
+            </td>
+            <td>
+              {{hips}}
+            </td>
+            <td>
+              {{comments}}
+            </td>
+        
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

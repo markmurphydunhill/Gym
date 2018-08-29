@@ -1,9 +1,12 @@
 {
   "assessmentCollection": [
     {
+      "id" : "01",
       "title": "Assessment 1",
-      "assessments": [
+      "duration": 35,
+      "assessmentResults": [
         {
+          "id" : "04",
           "weight": "12346",
           "chest": "23456",
           "thigh": "23456",
@@ -14,6 +17,7 @@
           
         },
          {
+          "id" : "05",
           "weight": "12346",
           "chest": "23456",
           "thigh": "23456",
@@ -24,6 +28,7 @@
           
         },
          {
+          "id" : "06", 
           "weight": "12346",
           "chest": "23456",
           "thigh": "23456",
@@ -36,10 +41,13 @@
       ]
     },
     {
+      "id" : "02",
       "title": "Assessment 2",
-      "assessments": [
+      "duration": 35,
+      "assessmentResults": [
        {
-          "weight": "12346",
+         "id" : "07", 
+         "weight": "12346",
           "chest": "23456",
           "thigh": "23456",
           "upperarm": "23456",
@@ -49,7 +57,8 @@
           
         },
        {
-          "weight": "12346",
+         "id" : "08", 
+         "weight": "12346",
           "chest": "23456",
           "thigh": "23456",
           "upperarm": "23456",
@@ -59,6 +68,7 @@
           
         },
  {
+          "id" : "09",      
           "weight": "12346",
           "chest": "23456",
           "thigh": "23456",
