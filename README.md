@@ -1,4 +1,5 @@
-Welcome to the Playlist 4
+Welcome to the Gym 16
+
 =========================
 
-Version 4 of the Playlist application
+Version 16 of the Gym application
