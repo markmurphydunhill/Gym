@@ -8,17 +8,20 @@ const uuid = require('uuid');
 const trainerdashboard = {
   
   index(request, response) {
-    //const playlistId = request.params.id;
+   
     logger.info('Trainer Dashboard Rendering');
     const assessment = assessmentStore.getAllAssessmentlists();
     const userinfo = userStore.getAllUsers() ;
     const combinedinfo = [];
         for (var i = 0; i < assessment.length; i++) {
-            if (assessment[i].userid === userinfo[i].id) {
-      combinedinfo.push({id: assessment[i].id, userid: assessment[i].userid, title: assessment[i].title,
-                         assessmentResults: assessment[i].assessmentResults,firstName: userinfo[i].firstName, 
-                         lastName: userinfo[i].lastName});    
+              for (var s = 0; s <userinfo.length; s++){
+              if (assessment[i].userid === userinfo[s].id) {
+              combinedinfo.push({id: assessment[i].id, userid: assessment[i].userid, title: assessment[i].title,
+                                 assessmentResults: assessment[i].assessmentResults,firstName: userinfo[i].firstName, 
+                                 lastName: userinfo[i].lastName}); 
+              break;  
               }
+            }
             }   
        
     const viewData = {
@@ -55,38 +58,6 @@ const trainerdashboard = {
     response.redirect(/trainerdashboard/);
   },
   
-  /*deleteSong(request, response) {
-    const playlistId = request.params.id;
-    const songId = request.params.songid;
-    logger.debug(`Deleting Song ${songId} from Playlist ${playlistId}`);
-    playlistStore.removeSong(playlistId, songId);
-    response.redirect('/playlist/' + playlistId);
-  },
-  
-  
-    addSong(request, response) {
-    const playlistId = request.params.id;
-    const playlist = playlistStore.getPlaylist(playlistId);
-    const newSong = {
-      id: uuid(),
-      title: request.body.title,
-      artist: request.body.artist,
-      duration: Number(request.body.duration),
-    };
-    logger.debug('New Song = ', newSong);
-    playlistStore.addSong(playlistId, newSong);
-    response.redirect('/playlist/' + playlistId);
-  },
-
-  deleteSong(request, response) {
-    const playlistId = request.params.id;
-    const songId = request.params.songid;
-    logger.debug(`Deleting Song ${songId} from Playlist ${playlistId}`);
-    playlistStore.removeSong(playlistId, songId);
-    response.redirect('/playlist/' + playlistId);
-  },
-
-*/
 };
 
 module.exports = trainerdashboard;

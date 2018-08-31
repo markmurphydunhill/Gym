@@ -10,8 +10,9 @@ const goalStore = require('../models/usergoal-store');
 const analytics = {
   
   getBmi(id) {
-    //const playlistId = request.params.id;
+   
     logger.info('Calculating BMI');
+ 
     const assessments = assessmentStore.getUserAssessments(id);
     const assessment = assessments[0].assessmentResults;
     const userinfo = userStore.getUserById(id) ;
@@ -31,11 +32,10 @@ const analytics = {
     const usersgoallist = goalStore.getGoallist(id);
     const goallist = usersgoallist[0].goals;
     const latestgoal = goallist[goallist.length-1];
-    //logger.info('Last Assessment',latestassessment);
-    
+       
     let goalstatus = '';
     
-    //const goalstatus;
+    
       if (latestgoal.goaldate > latestassessment.date){
         goalstatus = 'Open';
       }
@@ -51,34 +51,25 @@ const analytics = {
   
   getTrend(id){
     const assessments = assessmentStore.getUserAssessments(id);
-    const assessment = assessments[0].assessmentResults;
-       
-    let trend = true;
-   
-    //assessment[0].trend = trend;
+    const assessment = assessments[0].assessmentResults;      
     
-  if (assessment.length > 1) {
+     let trend = true;
+    if (assessment.length >= 1) {
         assessment[0].trend = trend;
-      for (var i = 1; i < assessment.length; i++) {
+        for (var i = 1; i < assessment.length; i++) {
           let trend = true;
           if(assessment[i].weight > assessment[i-1].weight){
                trend = false;
                assessment[i].trend = trend; 
              } 
           else
-           assessment[i].trend = trend;            
+          {
+           assessment[i].trend = trend;          
       }
-  
-       //logger.info('trend',assessment);   
-      return assessment;
-             
-   }   
-    
-    
-  
+      }
+    }
+      return assessment;   
   }
-  
-   
 };
 
 module.exports = analytics;

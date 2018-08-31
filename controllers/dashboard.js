@@ -15,9 +15,8 @@ const dashboard = {
     logger.info('dashboard rendering');
     const loggedInUser = accounts.getCurrentUser(request);
     const loggedInUserId = loggedInUser.id;
-   // const loggedInUserName = accounts.getUserNameById
     const bmi = analytics.getBmi(loggedInUserId);
-    const goalstatus = analytics.getGoalStatus(loggedInUserId);
+    const goalstatus = analytics.getGoalStatus(loggedInUserId);     
     const trend = analytics.getTrend(loggedInUserId);
     const viewData = {
       title: loggedInUser,      
@@ -57,7 +56,6 @@ const dashboard = {
   
       addGoal(request, response) {
     const loggedinuser = request.params.userid;
-    //const assessment = assessmentStore.getAssessmentlist(assessmentId);
     const newGoal = {
     
       goaldate:  request.body.goaldate,
@@ -71,37 +69,6 @@ const dashboard = {
     response.redirect('/dashboard/');
   },
   
-   /*addAssessment(request, response) {
-    const loggedInUser = accounts.getCurrentUser(request);
-    const newAssessment = {
-      id: uuid(),
-      userid: loggedInUser.id,
-      title: request.body.title,
-      songs: [],
-    };
-    logger.debug('Creating a new Playlist', newPlayList);
-    playlistStore.addPlaylist(newPlayList);
-    response.redirect('/dashboard');*/
-
-  /*deletePlaylist(request, response) {
-    const playlistId = request.params.id;
-    logger.debug(`Deleting Playlist ${playlistId}`);
-    playlistStore.removePlaylist(playlistId);
-    response.redirect('/dashboard');
-  },
-
-  addPlaylist(request, response) {
-    const loggedInUser = accounts.getCurrentUser(request);
-    const newPlayList = {
-      id: uuid(),
-      userid: loggedInUser.id,
-      title: request.body.title,
-      songs: [],
-    };
-    logger.debug('Creating a new Playlist', newPlayList);
-    playlistStore.addPlaylist(newPlayList);
-    response.redirect('/dashboard');
-  },*/
 };
 
 module.exports = dashboard;
