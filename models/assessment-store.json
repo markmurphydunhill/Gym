@@ -3,22 +3,21 @@
     {
       "id": "01",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "title": "Assessment 1",
-      "duration": 35,
       "assessmentResults": [
         {
-          "date": "21/06/2018",
+          "date": "2018-06-20",
           "id": "aebb1132-75e8-4934-96e6-83c79780214b",
           "weight": "55",
-          "chest": "55",
-          "thigh": "55",
-          "upperarm": "55",
+          "chest": "38",
+          "thigh": "15",
+          "upperarm": "10",
           "waist": "55",
           "hips": "55",
-          "comments": "Excellent work"
+          "comments": "Excellent work",
+          "trend": true
         },
         {
-          "date": "21/06/2018",
+          "date": "2018-06-21",
           "id": "772edc1e-2d7a-4a0c-907c-6502892f1c35",
           "weight": "75",
           "chest": "44",
@@ -26,7 +25,8 @@
           "upperarm": "44",
           "waist": "44",
           "hips": "44",
-          "comments": "Excellent work"
+          "comments": "Excellent work",
+          "trend": false
         },
         {
           "id": "6bdb8b96-a78c-48f2-acdf-b3b0ede201ba",
@@ -37,58 +37,26 @@
           "upperarm": "22",
           "waist": "22",
           "hips": "22",
-          "comments": "Well Done"
+          "comments": "Well Done",
+          "trend": false
         },
         {
-          "id": "2702f427-7894-416c-a732-3861d7edd0f2",
+          "id": "29b6a143-1cbb-483f-a80f-3c97f00e3b8b",
           "date": "2018-08-31",
-          "weight": "33",
-          "chest": "33",
-          "thigh": "33",
-          "upperarm": "33",
-          "waist": "33",
-          "hips": "33"
-        },
-        {
-          "id": "bb61bd6e-a90f-4c8c-80bf-b20f0b88cf22",
-          "date": "2018-01-05",
-          "weight": 233,
-          "chest": "44",
-          "thigh": "55",
-          "upperarm": "55",
-          "waist": "66",
-          "hips": "55"
+          "weight": "77",
+          "chest": "23",
+          "thigh": "23",
+          "upperarm": "23",
+          "waist": "23",
+          "hips": "23",
+          "trend": true
         }
       ]
     },
     {
       "id": "02",
-      "title": "Assessment 2",
       "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "duration": 35,
       "assessmentResults": [
-        {
-          "date": "21/06/2018",
-          "id": "09",
-          "weight": "12346",
-          "chest": "23456",
-          "thigh": "23456",
-          "upperarm": "23456",
-          "waist": "23456",
-          "hips": "23456",
-          "comments": "Excellent work"
-        },
-        {
-          "date": "21/06/2018",
-          "id": "447a7f9c-d39b-4f96-af9d-d61729e79b8d",
-          "weight": "33",
-          "chest": "99",
-          "thigh": "99",
-          "upperarm": "99",
-          "waist": "99",
-          "hips": "99",
-          "comments": "Well Done"
-        },
         {
           "id": "7a0f560d-e8a0-4375-98b3-a9fc20ed2a48",
           "date": "2018-08-23",
@@ -97,7 +65,49 @@
           "thigh": "77",
           "upperarm": "77",
           "waist": "77",
-          "hips": "77"
+          "hips": "77",
+          "trend": true,
+          "comments": "Good work"
+        },
+        {
+          "id": "f1efc4ea-d377-46e1-8bd1-c896f5977c6a",
+          "date": "2018-08-24",
+          "weight": "75",
+          "chest": "75",
+          "thigh": "75",
+          "upperarm": "75",
+          "waist": "75",
+          "hips": "75",
+          "trend": true
+        },
+        {
+          "id": "90e45e4c-09f0-46ea-abe7-cd753b0371d0",
+          "date": "2018-08-25",
+          "weight": "76",
+          "chest": "76",
+          "thigh": "76",
+          "upperarm": "76",
+          "waist": "76",
+          "hips": "76",
+          "trend": false,
+          "comments": "Excellent work"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d752",
+      "assessmentResults": [
+        {
+          "id": "63be2637-b5dd-46e7-ba00-fc811baa52e5",
+          "date": "2018-08-14",
+          "weight": "90",
+          "chest": "90",
+          "thigh": "90",
+          "upperarm": "90",
+          "waist": "90",
+          "hips": "90",
+          "trend": true
         }
       ]
     }

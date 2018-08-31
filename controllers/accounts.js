@@ -88,12 +88,6 @@ const accounts = {
          
   },
   
-  settings(){
-    
-  
-  
-  
-  }
   
 };
 

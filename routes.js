@@ -31,12 +31,14 @@ router.post('/settings/update/:userid', settings.updateUser);
 
 router.post('/addgoal/:userid', dashboard.addGoal);
 
+router.get('/about', about.index);
+
 
 
 //router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);
 //router.post('/dashboard/addplaylist', dashboard.addPlaylist);
 
-//router.get('/about', about.index);
+
 //router.get('/playlist/:id', playlist.index);
 
 
